@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kedarisetty Lovaraju Sons | Premium Dry Fruits, Chocolates & Spices · Kakinada · Since 1942</title>
+<meta name="description" content="Kedarisetty Lovaraju Sons, Kakinada. Trusted since 1942 for premium dry fruits, chocolates, spices and festive gift hampers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Poppins:wght@300;400;500;600&family=Noto+Serif+Telugu:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0b1a4a; --navy-2:#13266b; --navy-deep:#060f2e; --ink:#050b22;
+  --gold:#d4a73c; --gold-2:#f3d27a; --gold-3:#a87a1c; --cream:#fbf5e8; --cream-2:#f3e8cf;
+  --brown:#6b3f1d; --text:#2a2a33; --muted:#6c6a75;
+  --ff-display:'Cinzel',serif; --ff-serif:'Cormorant Garamond',serif; --ff-body:'Poppins',sans-serif; --ff-te:'Noto Serif Telugu',serif;
+  --radius:22px; --shadow:0 25px 60px -20px rgba(6,15,46,.45);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff-body);color:var(--text);background:var(--cream);overflow-x:hidden;line-height:1.6}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+.container{width:min(1200px,100% - 40px);margin-inline:auto}
+.gold-text{background:linear-gradient(100deg,var(--gold-3) 0%,var(--gold-2) 25%,#fff3c4 40%,var(--gold) 55%,var(--gold-3) 80%,var(--gold-2) 100%);background-size:250% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
+@keyframes shine{to{background-position:250% center}}
+.eyebrow{font-family:var(--ff-display);letter-spacing:.35em;text-transform:uppercase;font-size:.78rem;color:var(--gold-3);display:inline-flex;align-items:center;gap:12px}
+.eyebrow::before,.eyebrow::after{content:"";width:34px;height:1px;background:currentColor;opacity:.7}
+.section-title{font-family:var(--ff-display);font-size:clamp(2rem,4.5vw,3.3rem);line-height:1.15;color:var(--navy);margin:14px 0 18px}
+.section-sub{font-family:var(--ff-serif);font-size:1.3rem;color:var(--muted);max-width:640px}
+.center{text-align:center}.center .section-sub{margin-inline:auto}
+section{position:relative;padding:120px 0}
+
+/* ===== Preloader ===== */
+#loader{position:fixed;inset:0;background:radial-gradient(circle at 50% 45%,var(--navy-2),var(--ink) 70%);z-index:9999;display:grid;place-items:center;transition:opacity .8s ease,visibility .8s}
+#loader.done{opacity:0;visibility:hidden}
+.loader-inner{text-align:center}
+.loader-inner svg{width:150px;height:150px;margin:0 auto 22px;animation:pulse 1.6s ease-in-out infinite}
+.loader-inner .draw{stroke-dasharray:700;stroke-dashoffset:700;animation:draw 1.6s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes pulse{50%{transform:scale(1.05);filter:drop-shadow(0 0 25px rgba(243,210,122,.55))}}
+.loader-inner p{font-family:var(--ff-display);color:var(--gold-2);letter-spacing:.5em;font-size:.8rem;opacity:0;animation:fadeIn 1s .6s forwards}
+.loader-bar{width:180px;height:2px;background:rgba(255,255,255,.1);margin:18px auto 0;overflow:hidden;border-radius:2px}
+.loader-bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold-3),var(--gold-2));animation:load 1.8s ease forwards}
+@keyframes load{to{width:100%}}
+@keyframes fadeIn{to{opacity:1}}
+
+/* ===== Progress + Nav ===== */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold-3),var(--gold-2));z-index:1001;box-shadow:0 0 12px var(--gold)}
+.topbar{background:var(--ink);color:var(--gold-2);font-size:.78rem;letter-spacing:.08em;text-align:center;padding:8px 16px}
+.topbar b{color:#fff;font-weight:500}
+nav{position:sticky;top:0;z-index:1000;transition:all .4s}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:16px 0;transition:padding .4s}
+nav.scrolled{background:rgba(6,15,46,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 10px 30px rgba(0,0,0,.25)}
+nav.scrolled .wrap{padding:10px 0}
+.brand{display:flex;align-items:center;gap:12px;color:#fff}
+.brand svg{width:52px;height:52px;transition:transform .6s}
+.brand:hover svg{transform:rotate(360deg)}
+.brand-name{font-family:var(--ff-display);line-height:1.1;font-size:1.05rem;letter-spacing:.06em}
+.brand-name small{display:block;font-size:.62rem;letter-spacing:.35em;color:var(--gold-2)}
+.nav-links{display:flex;gap:34px;list-style:none}
+.nav-links a{color:rgba(255,255,255,.85);font-size:.9rem;letter-spacing:.05em;position:relative;padding:6px 0}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1.5px;background:var(--gold-2);transition:width .35s}
+.nav-links a:hover{color:var(--gold-2)}.nav-links a:hover::after{width:100%}
+.nav-actions{display:flex;gap:12px;align-items:center}
+.cart-btn{position:relative;width:46px;height:46px;border-radius:50%;border:1px solid rgba(243,210,122,.45);display:grid;place-items:center;color:var(--gold-2);transition:.3s}
+.cart-btn:hover{background:var(--gold);color:var(--navy)}
+.cart-count{position:absolute;top:-4px;right:-4px;background:#e2463b;color:#fff;font-size:.68rem;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;transform:scale(0);transition:transform .35s cubic-bezier(.5,2,.5,1)}
+.cart-count.show{transform:scale(1)}
+.cart-btn.bump{animation:bump .5s}
+@keyframes bump{30%{transform:scale(1.25) rotate(-8deg)}60%{transform:scale(.95) rotate(5deg)}}
+.burger{display:none;width:46px;height:46px;color:#fff}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:50px;font-weight:500;letter-spacing:.04em;font-size:.95rem;transition:all .35s;position:relative;overflow:hidden}
+.btn-gold{background:linear-gradient(135deg,var(--gold-2),var(--gold) 50%,var(--gold-3));color:var(--navy-deep);box-shadow:0 10px 30px -8px rgba(212,167,60,.7)}
+.btn-gold::before{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-20deg);transition:left .7s}
+.btn-gold:hover::before{left:140%}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 18px 40px -10px rgba(212,167,60,.85)}
+.btn-ghost{border:1px solid rgba(243,210,122,.6);color:var(--gold-2)}
+.btn-ghost:hover{background:rgba(243,210,122,.12);transform:translateY(-3px)}
+
+/* ===== Hero ===== */
+.hero{margin-top:-82px;padding:170px 0 120px;min-height:100vh;background:radial-gradient(ellipse at 70% 40%,var(--navy-2) 0%,var(--navy) 35%,var(--ink) 80%);color:#fff;overflow:hidden;display:flex;align-items:center}
+.hero::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23d4a73c' stroke-opacity='.07'%3E%3Cpath d='M40 4c10 14 10 22 0 36C30 26 30 18 40 4zM40 76c-10-14-10-22 0-36 10 14 10 22 0 36zM4 40c14-10 22-10 36 0-14 10-22 10-36 0zM76 40c-14 10-22 10-36 0 14-10 22-10 36 0z'/%3E%3Ccircle cx='40' cy='40' r='4'/%3E%3C/g%3E%3C/svg%3E");opacity:1}
+#dust{position:absolute;inset:0;pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;z-index:2}
+.hero h1{font-family:var(--ff-display);font-size:clamp(2.5rem,5.6vw,4.6rem);line-height:1.08;font-weight:700;margin:22px 0}
+.hero h1 .line{display:block;overflow:hidden}
+.hero h1 .line span{display:inline-block;transform:translateY(110%);transition:transform 1.1s cubic-bezier(.2,.8,.2,1)}
+.loaded .hero h1 .line span{transform:none}
+.hero h1 .line:nth-child(2) span{transition-delay:.12s}.hero h1 .line:nth-child(3) span{transition-delay:.24s}
+.hero .telugu{font-family:var(--ff-te);color:var(--gold-2);font-size:1.25rem;opacity:.9}
+.hero p.lead{font-family:var(--ff-serif);font-size:1.45rem;color:rgba(255,255,255,.78);max-width:540px;margin-bottom:36px}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:44px;margin-top:56px;flex-wrap:wrap}
+.stat b{font-family:var(--ff-display);font-size:2.4rem;color:var(--gold-2);display:block;line-height:1}
+.stat span{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.fade-up{opacity:0;transform:translateY(30px);transition:all 1s cubic-bezier(.2,.8,.2,1)}
+.loaded .fade-up{opacity:1;transform:none}
+.loaded .d1{transition-delay:.4s}.loaded .d2{transition-delay:.55s}.loaded .d3{transition-delay:.7s}.loaded .d4{transition-delay:.85s}
+
+.orbit-stage{position:relative;aspect-ratio:1;width:min(520px,100%);margin-inline:auto}
+.orbit-stage .crest{position:absolute;inset:22%;filter:drop-shadow(0 30px 50px rgba(0,0,0,.6)) drop-shadow(0 0 40px rgba(212,167,60,.3));animation:floaty 6s ease-in-out infinite}
+@keyframes floaty{50%{transform:translateY(-14px)}}
+.ring{position:absolute;border-radius:50%;border:1px dashed rgba(243,210,122,.25)}
+.ring.r1{inset:8%;animation:spin 38s linear infinite}
+.ring.r2{inset:-4%;animation:spin 60s linear infinite reverse;border-style:solid;border-color:rgba(243,210,122,.1)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.ring .nut{position:absolute;width:62px;height:62px;filter:drop-shadow(0 10px 14px rgba(0,0,0,.45))}
+.ring .nut svg{width:100%;height:100%;animation:spin 38s linear infinite reverse}
+.ring.r2 .nut svg{animation:spin 60s linear infinite}
+.glow{position:absolute;inset:25%;border-radius:50%;background:radial-gradient(circle,rgba(243,210,122,.35),transparent 70%);filter:blur(30px);animation:pulse2 4s ease-in-out infinite}
+@keyframes pulse2{50%{transform:scale(1.2);opacity:.6}}
+.floater{position:absolute;z-index:1;opacity:.55;pointer-events:none;transition:transform .2s ease-out}
+.floater svg{width:100%;height:100%;animation:drift 9s ease-in-out infinite}
+@keyframes drift{50%{transform:translateY(-22px) rotate(18deg)}}
+.scroll-hint{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:3;color:rgba(255,255,255,.5);font-size:.7rem;letter-spacing:.3em;text-align:center}
+.scroll-hint i{display:block;width:24px;height:38px;border:1.5px solid rgba(243,210,122,.5);border-radius:14px;margin:10px auto 0;position:relative}
+.scroll-hint i::after{content:"";position:absolute;left:50%;top:7px;width:3px;height:8px;background:var(--gold-2);border-radius:3px;transform:translateX(-50%);animation:wheel 1.8s infinite}
+@keyframes wheel{to{transform:translate(-50%,14px);opacity:0}}
+
+/* ===== Marquee ===== */
+.marquee{background:linear-gradient(90deg,var(--gold-3),var(--gold),var(--gold-2),var(--gold),var(--gold-3));padding:20px 0;overflow:hidden;transform:rotate(-1.5deg);margin:-30px -20px 0;position:relative;z-index:5;box-shadow:0 15px 40px -10px rgba(0,0,0,.35)}
+.marquee-track{display:flex;gap:50px;width:max-content;animation:marquee 35s linear infinite}
+.marquee span{font-family:var(--ff-display);font-weight:700;color:var(--navy-deep);font-size:1.25rem;letter-spacing:.12em;display:flex;align-items:center;gap:50px;white-space:nowrap}
+.marquee span::after{content:"✦";color:var(--navy-2);font-size:.9rem}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* ===== Reveal ===== */
+.reveal{opacity:0;transform:translateY(50px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal-l{opacity:0;transform:translateX(-60px);transition:all 1s cubic-bezier(.2,.8,.2,1)}
+.reveal-r{opacity:0;transform:translateX(60px);transition:all 1s cubic-bezier(.2,.8,.2,1)}
+.reveal-l.in,.reveal-r.in{opacity:1;transform:none}
+
+/* ===== Heritage ===== */
+.heritage{background:var(--cream)}
+.heritage-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:80px;align-items:center}
+.year-badge{position:relative;aspect-ratio:1;max-width:460px;margin:auto;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--navy-2),var(--navy-deep));display:grid;place-items:center;box-shadow:var(--shadow),inset 0 0 0 10px rgba(212,167,60,.15),inset 0 0 0 12px var(--gold-3)}
+.year-badge .yr{font-family:var(--ff-display);font-size:clamp(4rem,9vw,7rem);font-weight:900;line-height:1}
+.year-badge small{display:block;text-align:center;font-family:var(--ff-display);letter-spacing:.5em;color:var(--gold-2);font-size:.8rem;margin-top:8px}
+.year-badge .circ{position:absolute;inset:-4%;animation:spin 30s linear infinite}
+.year-badge .circ text{font-family:var(--ff-display);font-size:13px;letter-spacing:5px;fill:var(--gold-3)}
+.heritage p{font-family:var(--ff-serif);font-size:1.3rem;color:#4a4a55;margin-bottom:18px}
+.timeline{margin-top:36px;border-left:2px solid rgba(168,122,28,.3);padding-left:30px}
+.tl{position:relative;margin-bottom:24px}
+.tl::before{content:"";position:absolute;left:-38px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--cream);border:3px solid var(--gold)}
+.tl b{font-family:var(--ff-display);color:var(--navy);font-size:1.05rem}
+.tl p{font-family:var(--ff-body);font-size:.93rem;margin:2px 0 0;color:var(--muted)}
+
+/* ===== Categories ===== */
+.cats{background:linear-gradient(180deg,var(--cream),var(--cream-2))}
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:60px;perspective:1200px}
+.cat{border-radius:var(--radius);padding:38px 28px 34px;color:#fff;position:relative;overflow:hidden;min-height:400px;display:flex;flex-direction:column;justify-content:flex-end;transform-style:preserve-3d;transition:transform .2s ease-out,box-shadow .4s;box-shadow:var(--shadow);cursor:pointer}
+.cat:hover{box-shadow:0 40px 80px -25px rgba(6,15,46,.6)}
+.cat::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at var(--mx,50%) var(--my,30%),rgba(255,255,255,.25),transparent 55%);opacity:0;transition:opacity .4s}
+.cat:hover::before{opacity:1}
+.cat .art{position:absolute;top:30px;left:50%;width:190px;height:190px;transform:translateX(-50%) translateZ(60px);transition:transform .6s}
+.cat:hover .art{transform:translateX(-50%) translateZ(80px) scale(1.08) rotate(-6deg)}
+.cat .art svg{position:absolute;filter:drop-shadow(0 14px 18px rgba(0,0,0,.4))}
+.cat h3{font-family:var(--ff-display);font-size:1.6rem;transform:translateZ(40px)}
+.cat p{font-size:.9rem;opacity:.85;transform:translateZ(30px)}
+.cat .more{margin-top:14px;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-2);display:inline-flex;gap:8px;align-items:center;transform:translateZ(30px)}
+.cat .more i{transition:transform .3s}.cat:hover .more i{transform:translateX(6px)}
+.c1{background:linear-gradient(160deg,#8a5a2b,#3e220d)}
+.c2{background:linear-gradient(160deg,#5b2f1e,#1e0c06)}
+.c3{background:linear-gradient(160deg,#a8471f,#4a1508)}
+.c4{background:linear-gradient(160deg,var(--navy-2),var(--navy-deep))}
+
+/* ===== Products ===== */
+.products{background:var(--cream-2)}
+.filters{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:44px 0 50px}
+.filters button{padding:11px 24px;border-radius:40px;border:1px solid rgba(11,26,74,.18);color:var(--navy);font-size:.88rem;font-weight:500;transition:.3s;background:#fff}
+.filters button.active,.filters button:hover{background:var(--navy);color:var(--gold-2);border-color:var(--navy)}
+.p-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:26px}
+.p-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 30px -15px rgba(6,15,46,.25);transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s,opacity .4s;position:relative}
+.p-card.hide{display:none}
+.p-card:hover{transform:translateY(-10px);box-shadow:0 30px 60px -20px rgba(6,15,46,.4)}
+.p-img{height:200px;display:grid;place-items:center;position:relative;overflow:hidden}
+.p-img::after{content:"";position:absolute;inset:auto 0 0 0;height:40%;background:linear-gradient(transparent,rgba(0,0,0,.08))}
+.p-img .pile{position:relative;width:160px;height:130px;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.p-card:hover .pile{transform:scale(1.12) rotate(-4deg)}
+.pile svg{position:absolute;filter:drop-shadow(0 8px 10px rgba(0,0,0,.28))}
+.tag{position:absolute;top:16px;left:16px;background:var(--navy);color:var(--gold-2);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:30px;z-index:2}
+.tag.hot{background:#c0392b;color:#fff}
+.p-body{padding:22px 22px 24px}
+.p-body h4{font-family:var(--ff-display);color:var(--navy);font-size:1.12rem;margin-bottom:4px}
+.p-body p{font-size:.85rem;color:var(--muted);min-height:42px}
+.p-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:16px}
+.p-foot select{appearance:none;border:1px solid #e3dccb;border-radius:30px;padding:9px 30px 9px 14px;font-family:inherit;font-size:.82rem;color:var(--navy);background:#fbf7ee url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%230b1a4a'/%3E%3C/svg%3E") no-repeat right 12px center;cursor:pointer}
+.add{background:linear-gradient(135deg,var(--gold-2),var(--gold));color:var(--navy-deep);border-radius:30px;padding:10px 18px;font-weight:600;font-size:.82rem;display:flex;gap:6px;align-items:center;transition:.3s}
+.add:hover{transform:scale(1.06);box-shadow:0 8px 20px -6px rgba(212,167,60,.8)}
+.add.ok{background:#2e9b5a;color:#fff}
+.fly{position:fixed;width:40px;height:40px;z-index:3000;pointer-events:none;transition:all .8s cubic-bezier(.5,-.3,.7,1)}
+
+/* ===== Gifting ===== */
+.gifting{background:radial-gradient(ellipse at 20% 50%,var(--navy-2),var(--navy-deep) 70%);color:#fff;overflow:hidden}
+.gifting .section-title{color:#fff}.gifting .section-sub{color:rgba(255,255,255,.7)}
+.gift-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
+.giftbox{position:relative;width:300px;height:320px;margin:40px auto 0;cursor:pointer}
+.box-base{position:absolute;bottom:0;left:20px;width:260px;height:190px;background:linear-gradient(135deg,#b3282d,#6d0f14);border-radius:6px;box-shadow:inset -20px 0 40px rgba(0,0,0,.3),0 40px 60px -20px rgba(0,0,0,.7);z-index:3}
+.box-base::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:36px;transform:translateX(-50%);background:linear-gradient(90deg,var(--gold-3),var(--gold-2),var(--gold-3))}
+.box-lid{position:absolute;bottom:180px;left:6px;width:288px;height:56px;background:linear-gradient(135deg,#c8343a,#7d1218);border-radius:6px;z-index:5;transition:transform .8s cubic-bezier(.3,1.6,.5,1);transform-origin:left bottom;box-shadow:0 8px 20px rgba(0,0,0,.4)}
+.box-lid::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:36px;transform:translateX(-50%);background:linear-gradient(90deg,var(--gold-3),var(--gold-2),var(--gold-3))}
+.bow{position:absolute;left:50%;top:-46px;transform:translateX(-50%);width:120px;height:56px}
+.bow::before,.bow::after{content:"";position:absolute;bottom:0;width:58px;height:46px;border:12px solid var(--gold);border-radius:50% 50% 10% 50%;}
+.bow::before{left:0;transform:rotate(-20deg)}.bow::after{right:0;transform:rotate(20deg) scaleX(-1)}
+.giftbox:hover .box-lid,.giftbox.open .box-lid{transform:translate(-20px,-70px) rotate(-22deg)}
+.pop{position:absolute;left:50%;bottom:120px;width:52px;height:52px;margin-left:-26px;z-index:4;opacity:0;transition:all .9s cubic-bezier(.2,1.6,.4,1)}
+.giftbox:hover .pop,.giftbox.open .pop{opacity:1}
+.giftbox:hover .pop:nth-of-type(1),.giftbox.open .pop:nth-of-type(1){transform:translate(-90px,-150px) rotate(-30deg)}
+.giftbox:hover .pop:nth-of-type(2),.giftbox.open .pop:nth-of-type(2){transform:translate(-20px,-210px) rotate(20deg);transition-delay:.05s}
+.giftbox:hover .pop:nth-of-type(3),.giftbox.open .pop:nth-of-type(3){transform:translate(60px,-180px) rotate(60deg);transition-delay:.1s}
+.giftbox:hover .pop:nth-of-type(4),.giftbox.open .pop:nth-of-type(4){transform:translate(110px,-110px) rotate(-50deg);transition-delay:.15s}
+.giftbox:hover .pop:nth-of-type(5),.giftbox.open .pop:nth-of-type(5){transform:translate(-130px,-70px) rotate(80deg);transition-delay:.2s}
+.gift-hint{text-align:center;margin-top:24px;font-size:.78rem;letter-spacing:.25em;color:var(--gold-2);opacity:.7;text-transform:uppercase}
+.occasions{display:flex;gap:10px;flex-wrap:wrap;margin:30px 0 26px}
+.occasions button{padding:10px 20px;border-radius:30px;border:1px solid rgba(243,210,122,.35);color:rgba(255,255,255,.8);font-size:.88rem;transition:.3s}
+.occasions button.active,.occasions button:hover{background:var(--gold);color:var(--navy-deep);border-color:var(--gold)}
+.hamper-card{background:rgba(255,255,255,.05);border:1px solid rgba(243,210,122,.2);border-radius:var(--radius);padding:32px;backdrop-filter:blur(8px);min-height:260px}
+.hamper-card h3{font-family:var(--ff-display);font-size:1.6rem;color:var(--gold-2);margin-bottom:8px}
+.hamper-card p{color:rgba(255,255,255,.75);font-family:var(--ff-serif);font-size:1.2rem}
+.hamper-card ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0 26px}
+.hamper-card li{font-size:.9rem;color:rgba(255,255,255,.85);display:flex;gap:10px;align-items:center}
+.hamper-card li::before{content:"✦";color:var(--gold)}
+.hamper-card.swap{animation:swap .5s ease}
+@keyframes swap{from{opacity:0;transform:translateY(16px)}}
+
+/* ===== Why ===== */
+.why{background:var(--cream)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:60px}
+.why-card{background:#fff;border-radius:var(--radius);padding:40px 28px;text-align:center;position:relative;overflow:hidden;transition:transform .4s,box-shadow .4s;border:1px solid #efe6d2}
+.why-card::before{content:"";position:absolute;inset:auto 0 0 0;height:0;background:linear-gradient(180deg,var(--navy),var(--navy-deep));transition:height .5s cubic-bezier(.2,.8,.2,1);z-index:0}
+.why-card:hover::before{height:100%}
+.why-card>*{position:relative;z-index:1;transition:color .4s}
+.why-card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.why-card:hover h4{color:var(--gold-2)}.why-card:hover p{color:rgba(255,255,255,.75)}
+.why-icon{width:78px;height:78px;margin:0 auto 22px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold-2),var(--gold-3));color:var(--navy-deep);box-shadow:0 10px 25px -8px rgba(168,122,28,.7);transition:transform .6s}
+.why-card:hover .why-icon{transform:rotateY(360deg)}
+.why-card h4{font-family:var(--ff-display);font-size:1.2rem;color:var(--navy);margin-bottom:8px}
+.why-card p{font-size:.9rem;color:var(--muted)}
+
+/* ===== Nutrition ===== */
+.nutri{background:linear-gradient(180deg,var(--cream),#efe3c6)}
+.n-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-top:50px}
+.n-tabs{display:flex;flex-direction:column;gap:12px}
+.n-tab{display:flex;align-items:center;gap:18px;padding:16px 20px;border-radius:18px;background:rgba(255,255,255,.6);border:1px solid transparent;text-align:left;transition:.35s}
+.n-tab svg{width:44px;height:44px;flex:none}
+.n-tab b{font-family:var(--ff-display);color:var(--navy);display:block}
+.n-tab span{font-size:.82rem;color:var(--muted)}
+.n-tab.active,.n-tab:hover{background:#fff;border-color:var(--gold);box-shadow:0 14px 30px -14px rgba(168,122,28,.5);transform:translateX(8px)}
+.n-panel{background:var(--navy);color:#fff;border-radius:28px;padding:44px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.n-panel .big{position:absolute;right:-30px;bottom:-30px;width:220px;height:220px;opacity:.18;animation:spin 40s linear infinite}
+.n-panel h3{font-family:var(--ff-display);font-size:2rem;color:var(--gold-2)}
+.n-panel .te{font-family:var(--ff-te);color:rgba(255,255,255,.6);margin-bottom:18px}
+.bar{margin:16px 0}
+.bar label{display:flex;justify-content:space-between;font-size:.85rem;color:rgba(255,255,255,.8);margin-bottom:6px}
+.bar div{height:8px;background:rgba(255,255,255,.1);border-radius:8px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold-3),var(--gold-2));border-radius:8px;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.n-panel p.note{margin-top:22px;font-family:var(--ff-serif);font-size:1.15rem;color:rgba(255,255,255,.75)}
+
+/* ===== Testimonials ===== */
+.testi{background:var(--navy-deep);color:#fff;overflow:hidden}
+.testi .section-title{color:#fff}
+.t-slider{position:relative;max-width:820px;margin:50px auto 0;min-height:260px}
+.t-slide{position:absolute;inset:0;text-align:center;opacity:0;transform:translateX(60px);transition:all .8s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+.t-slide.active{opacity:1;transform:none;pointer-events:auto}
+.t-slide .q{font-family:var(--ff-serif);font-style:italic;font-size:clamp(1.3rem,2.6vw,1.9rem);line-height:1.5;color:rgba(255,255,255,.9)}
+.t-slide .stars{color:var(--gold-2);letter-spacing:6px;margin:22px 0 8px}
+.t-slide .who{font-family:var(--ff-display);color:var(--gold-2);letter-spacing:.1em}
+.t-slide .who small{display:block;color:rgba(255,255,255,.5);font-family:var(--ff-body);letter-spacing:.05em;font-size:.82rem}
+.quote-mark{font-family:var(--ff-display);font-size:9rem;line-height:.6;color:var(--gold);opacity:.25;text-align:center}
+.dots{display:flex;justify-content:center;gap:10px;margin-top:20px}
+.dots button{width:10px;height:10px;border-radius:10px;background:rgba(255,255,255,.25);transition:.4s}
+.dots button.active{width:34px;background:var(--gold)}
+
+/* ===== Insta ===== */
+.insta{background:var(--cream);padding:100px 0}
+.insta-row{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:44px}
+.insta-tile{aspect-ratio:1;border-radius:16px;position:relative;overflow:hidden;display:grid;place-items:center}
+.insta-tile svg.n{width:55%;height:55%;transition:transform .6s;filter:drop-shadow(0 8px 10px rgba(0,0,0,.3))}
+.insta-tile:hover svg.n{transform:scale(1.2) rotate(15deg)}
+.insta-tile .ov{position:absolute;inset:0;background:rgba(6,15,46,.7);display:grid;place-items:center;color:#fff;opacity:0;transition:.4s}
+.insta-tile:hover .ov{opacity:1}
+
+/* ===== Contact ===== */
+.contact{background:linear-gradient(180deg,var(--cream),var(--cream-2))}
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:40px;margin-top:50px}
+.c-card{background:var(--navy);color:#fff;border-radius:28px;padding:44px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.c-card::after{content:"";position:absolute;width:300px;height:300px;right:-120px;top:-120px;border-radius:50%;background:radial-gradient(circle,rgba(243,210,122,.3),transparent 70%)}
+.c-item{display:flex;gap:18px;align-items:flex-start;margin-bottom:28px}
+.c-item .ic{width:50px;height:50px;border-radius:14px;background:rgba(243,210,122,.12);border:1px solid rgba(243,210,122,.3);display:grid;place-items:center;color:var(--gold-2);flex:none}
+.c-item b{display:block;font-family:var(--ff-display);color:var(--gold-2);font-size:.95rem;letter-spacing:.08em}
+.c-item span,.c-item a{color:rgba(255,255,255,.85);font-size:.95rem}
+.map{border-radius:28px;overflow:hidden;box-shadow:var(--shadow);min-height:420px;border:6px solid #fff}
+.map iframe{width:100%;height:100%;min-height:420px;border:0;filter:saturate(.8)}
+
+/* ===== CTA band ===== */
+.cta-band{background:linear-gradient(120deg,var(--gold-3),var(--gold),var(--gold-2),var(--gold));background-size:300% 300%;animation:grad 10s ease infinite;padding:80px 0;text-align:center}
+@keyframes grad{50%{background-position:100% 50%}}
+.cta-band h2{font-family:var(--ff-display);color:var(--navy-deep);font-size:clamp(1.8rem,4vw,3rem)}
+.cta-band p{font-family:var(--ff-serif);font-size:1.35rem;color:var(--navy);margin:10px 0 30px}
+.btn-navy{background:var(--navy-deep);color:var(--gold-2)}
+.btn-navy:hover{transform:translateY(-3px);box-shadow:0 18px 40px -12px rgba(6,15,46,.7)}
+
+/* ===== Footer ===== */
+footer{background:var(--ink);color:rgba(255,255,255,.65);padding:80px 0 30px;font-size:.9rem}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+footer h5{font-family:var(--ff-display);color:var(--gold-2);font-size:1rem;letter-spacing:.12em;margin-bottom:18px}
+footer ul{list-style:none}footer li{margin-bottom:10px}
+footer li a:hover{color:var(--gold-2)}
+.f-bottom{border-top:1px solid rgba(255,255,255,.08);margin-top:50px;padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.8rem}
+.socials{display:flex;gap:12px;margin-top:20px}
+.socials a{width:42px;height:42px;border-radius:50%;border:1px solid rgba(243,210,122,.3);display:grid;place-items:center;color:var(--gold-2);transition:.3s}
+.socials a:hover{background:var(--gold);color:var(--navy-deep);transform:translateY(-4px)}
+
+/* ===== Floating ===== */
+.wa-float{position:fixed;right:24px;bottom:24px;z-index:900;width:62px;height:62px;border-radius:50%;background:#25d366;display:grid;place-items:center;color:#fff;box-shadow:0 12px 30px -6px rgba(37,211,102,.7)}
+.wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;background:#25d366;animation:ping 2s infinite;z-index:-1}
+@keyframes ping{to{transform:scale(1.7);opacity:0}}
+.to-top{position:fixed;right:32px;bottom:100px;z-index:900;width:46px;height:46px;border-radius:50%;background:var(--navy);color:var(--gold-2);display:grid;place-items:center;opacity:0;transform:translateY(20px);transition:.4s;border:1px solid rgba(243,210,122,.3)}
+.to-top.show{opacity:1;transform:none}
+
+/* ===== Cart drawer ===== */
+.overlay{position:fixed;inset:0;background:rgba(5,11,34,.6);backdrop-filter:blur(4px);z-index:1990;opacity:0;visibility:hidden;transition:.4s}
+.overlay.show{opacity:1;visibility:visible}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(420px,100%);background:var(--cream);z-index:2000;transform:translateX(100%);transition:transform .5s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column;box-shadow:-20px 0 60px rgba(0,0,0,.3)}
+.drawer.show{transform:none}
+.d-head{background:var(--navy);color:#fff;padding:26px 28px;display:flex;justify-content:space-between;align-items:center}
+.d-head h3{font-family:var(--ff-display);color:var(--gold-2);font-size:1.3rem}
+.d-head small{display:block;color:rgba(255,255,255,.6);font-size:.8rem}
+.d-head button{color:#fff;font-size:1.6rem}
+.d-body{flex:1;overflow:auto;padding:20px 24px}
+.d-empty{text-align:center;color:var(--muted);padding:60px 20px}
+.d-empty svg{width:90px;height:90px;margin:0 auto 18px;opacity:.6}
+.d-item{display:flex;gap:14px;align-items:center;padding:14px;background:#fff;border-radius:16px;margin-bottom:12px;animation:swap .4s}
+.d-item .thumb{width:54px;height:54px;border-radius:12px;display:grid;place-items:center;flex:none}
+.d-item .thumb svg{width:34px;height:34px}
+.d-item .info{flex:1}
+.d-item b{font-family:var(--ff-display);color:var(--navy);font-size:.92rem;display:block}
+.d-item small{color:var(--muted)}
+.qty{display:flex;align-items:center;gap:8px}
+.qty button{width:28px;height:28px;border-radius:50%;background:var(--cream-2);color:var(--navy);font-weight:600}
+.d-foot{padding:22px 24px;border-top:1px solid #e8dcc1}
+.d-foot .btn{width:100%;justify-content:center;background:#25d366;color:#fff}
+.d-foot p{font-size:.78rem;color:var(--muted);text-align:center;margin-top:10px}
+
+.toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,120px);background:var(--navy);color:#fff;padding:14px 26px;border-radius:40px;z-index:3000;transition:transform .5s cubic-bezier(.3,1.5,.5,1);display:flex;gap:10px;align-items:center;font-size:.9rem;border:1px solid rgba(243,210,122,.4)}
+.toast.show{transform:translate(-50%,0)}
+.toast b{color:var(--gold-2)}
+
+/* ===== Responsive ===== */
+@media (max-width:1024px){
+  .cat-grid,.why-grid{grid-template-columns:repeat(2,1fr)}
+  .insta-row{grid-template-columns:repeat(3,1fr)}
+  .f-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  section{padding:90px 0}
+  .nav-links{position:fixed;inset:0 0 0 auto;width:min(300px,85%);background:var(--navy-deep);flex-direction:column;padding:110px 36px;gap:26px;transform:translateX(100%);transition:transform .5s cubic-bezier(.2,.8,.2,1);box-shadow:-20px 0 50px rgba(0,0,0,.5)}
+  .nav-links.open{transform:none}
+  .nav-links a{font-size:1.1rem}
+  .burger{display:grid;place-items:center;z-index:1001}
+  .nav-actions .btn{display:none}
+  .hero{padding-top:140px;text-align:center}
+  .hero-grid,.heritage-grid,.gift-grid,.n-wrap,.contact-grid{grid-template-columns:1fr}
+  .hero-ctas,.hero-stats{justify-content:center}
+  .hero p.lead{margin-inline:auto}
+  .orbit-stage{width:min(380px,100%);order:-1}
+  .heritage-grid{gap:50px}
+  .year-badge{max-width:320px}
+}
+@media (max-width:560px){
+  .container{width:calc(100% - 32px)}
+  .cat-grid,.why-grid{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr}
+  .hero-stats{gap:28px}
+  .stat b{font-size:1.9rem}
+  .hamper-card ul{grid-template-columns:1fr}
+  .giftbox{transform:scale(.85)}
+  .brand-name{font-size:.9rem}
+  .ring .nut{width:46px;height:46px}
+  .n-panel,.c-card{padding:30px}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<!-- ===== SVG library ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gAlm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c98b4f"/><stop offset=".55" stop-color="#9a5e2c"/><stop offset="1" stop-color="#6b3a16"/></linearGradient>
+    <linearGradient id="gCash" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff6dc"/><stop offset=".6" stop-color="#f0d9a2"/><stop offset="1" stop-color="#d4b06a"/></linearGradient>
+    <linearGradient id="gPistS" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4e6c6"/><stop offset="1" stop-color="#c9a873"/></linearGradient>
+    <linearGradient id="gPistK" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a7c957"/><stop offset=".6" stop-color="#6a994e"/><stop offset="1" stop-color="#7a3b5a"/></linearGradient>
+    <radialGradient id="gWal" cx=".35" cy=".3"><stop offset="0" stop-color="#d9b07a"/><stop offset=".7" stop-color="#a86f3a"/><stop offset="1" stop-color="#6f4220"/></radialGradient>
+    <radialGradient id="gRais" cx=".35" cy=".3"><stop offset="0" stop-color="#8a4c7a"/><stop offset="1" stop-color="#2e1027"/></radialGradient>
+    <linearGradient id="gChoc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7a4a2a"/><stop offset="1" stop-color="#3a1d0d"/></linearGradient>
+    <linearGradient id="gCard" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b5d17a"/><stop offset="1" stop-color="#5d7f2e"/></linearGradient>
+    <linearGradient id="gStar" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a0522d"/><stop offset="1" stop-color="#4a2210"/></linearGradient>
+    <radialGradient id="gDate" cx=".35" cy=".3"><stop offset="0" stop-color="#a0522d"/><stop offset="1" stop-color="#3b1407"/></radialGradient>
+    <radialGradient id="gFig" cx=".4" cy=".3"><stop offset="0" stop-color="#e7c88f"/><stop offset="1" stop-color="#9c6b35"/></radialGradient>
+    <radialGradient id="gApri" cx=".35" cy=".3"><stop offset="0" stop-color="#ffc061"/><stop offset="1" stop-color="#d9741d"/></radialGradient>
+    <radialGradient id="gMakh" cx=".35" cy=".3"><stop offset="0" stop-color="#ffffff"/><stop offset=".8" stop-color="#efe6d4"/><stop offset="1" stop-color="#c8b796"/></radialGradient>
+    <linearGradient id="gSaff" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff5a1f"/><stop offset="1" stop-color="#a3130b"/></linearGradient>
+    <linearGradient id="gCinn" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7b3f1a"/><stop offset=".5" stop-color="#b8662e"/><stop offset="1" stop-color="#6a3313"/></linearGradient>
+    <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3d27a"/><stop offset=".5" stop-color="#d4a73c"/><stop offset="1" stop-color="#8f6514"/></linearGradient>
+  </defs>
+  <symbol id="almond" viewBox="0 0 60 90"><path d="M30 3C51 24 56 62 30 87 4 62 9 24 30 3Z" fill="url(#gAlm)"/><path d="M30 12c-6 20-6 50 0 68M22 22c-4 18-3 40 3 56M38 22c4 18 3 40-3 56" stroke="#5a2f10" stroke-opacity=".35" stroke-width="1.4" fill="none"/><path d="M24 18c-5 10-7 22-6 30" stroke="#fff" stroke-opacity=".3" stroke-width="3" fill="none" stroke-linecap="round"/></symbol>
+  <symbol id="cashew" viewBox="0 0 100 80"><path d="M22 14C8 38 20 70 52 74 80 77 96 60 90 46c-4-9-15-8-19 0-6 9-21 9-28-1-6-9-4-21-8-29-3-8-9-9-13-2Z" fill="url(#gCash)"/><path d="M30 20c-6 18 0 38 18 46" stroke="#b8904a" stroke-opacity=".5" stroke-width="2" fill="none"/><path d="M25 22c-4 10-3 20 1 27" stroke="#fff" stroke-opacity=".7" stroke-width="3" fill="none" stroke-linecap="round"/></symbol>
+  <symbol id="pista" viewBox="0 0 80 90"><ellipse cx="40" cy="47" rx="30" ry="40" fill="url(#gPistS)"/><path d="M40 7c14 10 18 30 14 50-3 16-10 26-14 30-4-4-11-14-14-30-4-20 0-40 14-50Z" fill="url(#gPistK)"/><path d="M36 18c-4 12-5 26-2 38" stroke="#fff" stroke-opacity=".4" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M14 30c-4 14-2 30 6 42M66 30c4 14 2 30-6 42" stroke="#a88552" stroke-opacity=".5" stroke-width="1.5" fill="none"/></symbol>
+  <symbol id="walnut" viewBox="0 0 90 90"><path d="M45 6c22 0 38 16 38 38 0 24-16 40-38 40S7 68 7 44C7 22 23 6 45 6Z" fill="url(#gWal)"/><path d="M45 8v76" stroke="#6f4220" stroke-width="2.5"/><path d="M20 26c8 2 10 10 18 8M18 46c10-2 12 8 22 4M22 66c8-4 12 4 18 0M70 26c-8 2-10 10-18 8M72 46c-10-2-12 8-22 4M68 66c-8-4-12 4-18 0M30 16c2 6 8 8 10 4M60 16c-2 6-8 8-10 4" stroke="#6f4220" stroke-opacity=".7" stroke-width="2" fill="none" stroke-linecap="round"/></symbol>
+  <symbol id="raisin" viewBox="0 0 60 60"><ellipse cx="30" cy="31" rx="22" ry="26" fill="url(#gRais)"/><path d="M16 22c8 4 12 0 20 4s8 10 14 8M14 38c8-2 12 4 20 2s10-6 14-2M24 12c2 6 8 8 12 4" stroke="#1a0715" stroke-opacity=".5" stroke-width="1.8" fill="none"/><ellipse cx="22" cy="20" rx="5" ry="3" fill="#fff" fill-opacity=".25" transform="rotate(-30 22 20)"/></symbol>
+  <symbol id="choco" viewBox="0 0 90 70"><rect x="3" y="3" width="84" height="64" rx="7" fill="url(#gChoc)"/><g fill="#5c321a" stroke="#2a1206" stroke-opacity=".4"><rect x="10" y="10" width="20" height="22" rx="3"/><rect x="35" y="10" width="20" height="22" rx="3"/><rect x="60" y="10" width="20" height="22" rx="3"/><rect x="10" y="38" width="20" height="22" rx="3"/><rect x="35" y="38" width="20" height="22" rx="3"/><rect x="60" y="38" width="20" height="22" rx="3"/></g><path d="M12 12h16M37 12h16M62 12h16" stroke="#fff" stroke-opacity=".25" stroke-width="2"/></symbol>
+  <symbol id="truffle" viewBox="0 0 70 70"><circle cx="35" cy="38" r="28" fill="url(#gChoc)"/><path d="M14 30c6-4 10 4 16 0s10-4 14 0 10 4 14-2" stroke="#d4a73c" stroke-width="3" fill="none" stroke-linecap="round"/><ellipse cx="25" cy="26" rx="7" ry="4" fill="#fff" fill-opacity=".2" transform="rotate(-25 25 26)"/></symbol>
+  <symbol id="cardamom" viewBox="0 0 50 90"><path d="M25 4c14 10 18 30 18 44S36 80 25 86C14 80 7 62 7 48S11 14 25 4Z" fill="url(#gCard)"/><path d="M25 8v76M17 16c-4 20-4 44 2 62M33 16c4 20 4 44-2 62" stroke="#3d5a1a" stroke-opacity=".45" stroke-width="1.5" fill="none"/><path d="M25 4l-2-4h4z" fill="#7a8a3a"/></symbol>
+  <symbol id="anise" viewBox="0 0 90 90"><g fill="url(#gStar)"><path id="pt" d="M45 45L40 8c2-4 8-4 10 0Z"/><use href="#pt" transform="rotate(45 45 45)"/><use href="#pt" transform="rotate(90 45 45)"/><use href="#pt" transform="rotate(135 45 45)"/><use href="#pt" transform="rotate(180 45 45)"/><use href="#pt" transform="rotate(225 45 45)"/><use href="#pt" transform="rotate(270 45 45)"/><use href="#pt" transform="rotate(315 45 45)"/></g><circle cx="45" cy="45" r="7" fill="#3a1808"/><g fill="#e0a868"><ellipse cx="45" cy="26" rx="3" ry="5"/><ellipse cx="45" cy="64" rx="3" ry="5"/><ellipse cx="26" cy="45" rx="5" ry="3"/><ellipse cx="64" cy="45" rx="5" ry="3"/></g></symbol>
+  <symbol id="cinnamon" viewBox="0 0 100 40"><rect x="4" y="8" width="92" height="24" rx="12" fill="url(#gCinn)"/><ellipse cx="90" cy="20" rx="6" ry="12" fill="#5a2a0e"/><path d="M90 10c-4 4-4 16 0 20M90 13c-2 3-2 11 0 14" stroke="#c07a40" stroke-width="1.5" fill="none"/><path d="M10 14h70M10 26h70" stroke="#4a210b" stroke-opacity=".35"/></symbol>
+  <symbol id="date" viewBox="0 0 60 90"><ellipse cx="30" cy="46" rx="22" ry="40" fill="url(#gDate)"/><path d="M18 20c6 6 4 14 10 18s4 14 10 18M40 18c-4 10 2 16-2 26" stroke="#1f0903" stroke-opacity=".5" stroke-width="1.6" fill="none"/><ellipse cx="22" cy="28" rx="4" ry="10" fill="#fff" fill-opacity=".18" transform="rotate(10 22 28)"/></symbol>
+  <symbol id="fig" viewBox="0 0 80 80"><path d="M40 6c8 0 10 8 14 14 14 4 22 16 22 30 0 18-16 26-36 26S4 68 4 50c0-14 8-26 22-30 4-6 6-14 14-14Z" fill="url(#gFig)"/><g fill="#7a4a1c" fill-opacity=".5"><circle cx="30" cy="44" r="2"/><circle cx="42" cy="38" r="2"/><circle cx="50" cy="50" r="2"/><circle cx="34" cy="58" r="2"/><circle cx="56" cy="40" r="1.6"/><circle cx="24" cy="54" r="1.6"/></g></symbol>
+  <symbol id="apricot" viewBox="0 0 80 80"><circle cx="40" cy="42" r="32" fill="url(#gApri)"/><path d="M40 12c-6 10-6 50 0 60" stroke="#b8561a" stroke-opacity=".5" stroke-width="2" fill="none"/><ellipse cx="28" cy="28" rx="8" ry="5" fill="#fff" fill-opacity=".3" transform="rotate(-30 28 28)"/></symbol>
+  <symbol id="makhana" viewBox="0 0 70 70"><circle cx="35" cy="36" r="28" fill="url(#gMakh)"/><path d="M18 30c6 2 8-4 14-2s6 6 12 4 10-4 12 0" stroke="#9c7a4a" stroke-opacity=".5" stroke-width="1.5" fill="none"/><circle cx="44" cy="46" r="5" fill="#8a5a2a" fill-opacity=".35"/></symbol>
+  <symbol id="saffron" viewBox="0 0 60 90"><g stroke="url(#gSaff)" stroke-width="5" stroke-linecap="round" fill="none"><path d="M30 86C28 60 18 40 10 10"/><path d="M30 86c0-26 0-50 2-80"/><path d="M30 86c4-26 14-46 22-74"/></g><g fill="#ff6a2a"><ellipse cx="10" cy="10" rx="5" ry="8"/><ellipse cx="32" cy="6" rx="5" ry="8"/><ellipse cx="52" cy="12" rx="5" ry="8"/></g></symbol>
+  <symbol id="pepper" viewBox="0 0 70 70"><g fill="#2a1a12"><circle cx="22" cy="24" r="12"/><circle cx="46" cy="22" r="11"/><circle cx="34" cy="46" r="13"/></g><g fill="#fff" fill-opacity=".2"><circle cx="18" cy="20" r="3"/><circle cx="42" cy="18" r="3"/><circle cx="30" cy="42" r="3"/></g></symbol>
+  <symbol id="seeds" viewBox="0 0 80 70"><g fill="#4f7a3a"><ellipse cx="22" cy="20" rx="8" ry="14" transform="rotate(-25 22 20)"/><ellipse cx="50" cy="22" rx="8" ry="14" transform="rotate(30 50 22)"/><ellipse cx="36" cy="48" rx="8" ry="14" transform="rotate(80 36 48)"/></g><g fill="#3d3530"><ellipse cx="62" cy="50" rx="5" ry="9" transform="rotate(-20 62 50)"/><ellipse cx="14" cy="50" rx="5" ry="9" transform="rotate(20 14 50)"/></g></symbol>
+  <symbol id="gift" viewBox="0 0 80 80"><rect x="8" y="30" width="64" height="44" rx="4" fill="#b3282d"/><rect x="4" y="20" width="72" height="14" rx="3" fill="#c8343a"/><rect x="34" y="20" width="12" height="54" fill="url(#gGold)"/><path d="M40 20c-10-16-26-10-18 0M40 20c10-16 26-10 18 0" stroke="url(#gGold)" stroke-width="5" fill="none"/></symbol>
+  <symbol id="crest" viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="97" fill="#0b1a4a" stroke="url(#gGold)" stroke-width="4"/>
+    <circle cx="100" cy="100" r="88" fill="none" stroke="#d4a73c" stroke-opacity=".5" stroke-width="1" stroke-dasharray="2 4"/>
+    <g class="laurel" fill="url(#gGold)"></g>
+    <path d="M78 46l6 10 8-12 8 12 8-12 8 12 6-10v20H78z" fill="url(#gGold)"/>
+    <circle cx="100" cy="40" r="3" fill="#f3d27a"/><circle cx="78" cy="45" r="2.4" fill="#f3d27a"/><circle cx="122" cy="45" r="2.4" fill="#f3d27a"/>
+    <text x="100" y="128" text-anchor="middle" font-family="Cinzel, serif" font-weight="900" font-size="64" fill="url(#gGold)">K</text>
+    <path d="M58 138c14 8 28 10 42 10s28-2 42-10l-4 12c-12 6-24 8-38 8s-26-2-38-8z" fill="url(#gGold)"/>
+    <text x="100" y="170" text-anchor="middle" font-family="Cinzel, serif" font-size="9" letter-spacing="2" fill="#f3d27a">ESTD 1942</text>
+  </symbol>
+</svg>
+
+<!-- Preloader -->
+<div id="loader">
+  <div class="loader-inner">
+    <svg viewBox="0 0 200 200"><circle class="draw" cx="100" cy="100" r="92" fill="none" stroke="#d4a73c" stroke-width="2"/><use href="#crest" x="12" y="12" width="176" height="176"/></svg>
+    <p>SINCE 1942</p>
+    <div class="loader-bar"><span></span></div>
+  </div>
+</div>
+
+<script>
+/* Safety net: if anything fails or loads slowly, never leave the visitor on a blank/loader screen */
+(function(){
+  function showAll(){
+    var l=document.getElementById('loader'); if(l) l.classList.add('done');
+    document.body.classList.add('loaded');
+    var els=document.querySelectorAll('.reveal,.reveal-l,.reveal-r');
+    for(var i=0;i<els.length;i++) els[i].classList.add('in');
+  }
+  window.addEventListener('error',showAll);
+  setTimeout(function(){ var l=document.getElementById('loader'); if(l) l.classList.add('done'); document.body.classList.add('loaded'); },3500);
+})();
+</script>
+<div id="progress"></div>
+<div class="topbar">✦ Festive Gift Hampers now open for Diwali &amp; Sankranti orders · Call <b>98486 52571</b> ✦</div>
+
+<nav id="nav">
+  <div class="container wrap">
+    <a href="#home" class="brand"><svg viewBox="0 0 200 200"><use href="#crest"/></svg><div class="brand-name">KEDARISETTY<br>LOVARAJU SONS<small>KAKINADA · 1942</small></div></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#heritage">Our Legacy</a></li>
+      <li><a href="#categories">Collections</a></li>
+      <li><a href="#products">Shop</a></li>
+      <li><a href="#gifting">Gifting</a></li>
+      <li><a href="#contact">Visit Us</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#products" class="btn btn-gold" style="padding:11px 22px">Order Now</a>
+      <button class="cart-btn" id="cartBtn" aria-label="Open order list">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="burger" id="burger" aria-label="Menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M9 18h12"/></svg></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero" id="home">
+  <canvas id="dust"></canvas>
+  <div class="floater" data-depth="30" style="width:70px;height:100px;top:18%;left:4%"><svg><use href="#almond"/></svg></div>
+  <div class="floater" data-depth="-20" style="width:90px;height:70px;bottom:14%;left:10%"><svg style="animation-delay:-3s"><use href="#cashew"/></svg></div>
+  <div class="floater" data-depth="40" style="width:60px;height:60px;top:14%;right:44%"><svg style="animation-delay:-5s"><use href="#raisin"/></svg></div>
+  <div class="floater" data-depth="-35" style="width:70px;height:70px;bottom:8%;right:6%"><svg style="animation-delay:-2s"><use href="#anise"/></svg></div>
+
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow fade-up">Kakinada's Trusted Name · Since 1942</span>
+      <h1>
+        <span class="line"><span>Eight Decades</span></span>
+        <span class="line"><span>of <span class="gold-text">Purity</span>,</span></span>
+        <span class="line"><span>Packed with Love.</span></span>
+      </h1>
+      <p class="telugu fade-up d1">1942 నుండి మీ నమ్మకం · స్వచ్ఛత · నాణ్యత</p>
+      <p class="lead fade-up d2">Hand-picked dry fruits, fine chocolates and aromatic spices, chosen with the same care our family has given every customer for three generations.</p>
+      <div class="hero-ctas fade-up d3">
+        <a href="#products" class="btn btn-gold">Explore Collection <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        <a href="#gifting" class="btn btn-ghost">🎁 Gift Hampers</a>
+      </div>
+      <div class="hero-stats fade-up d4">
+        <div class="stat"><b data-count="84">0</b><span>Years of Trust</span></div>
+        <div class="stat"><b data-count="100" data-suffix="+">0</b><span>Premium Products</span></div>
+        <div class="stat"><b data-count="3">0</b><span>Generations</span></div>
+      </div>
+    </div>
+    <div class="orbit-stage fade-up d2" id="orbit">
+      <div class="glow"></div>
+      <div class="ring r2" id="ring2"></div>
+      <div class="ring r1" id="ring1"></div>
+      <svg class="crest" viewBox="0 0 200 200"><use href="#crest"/></svg>
+    </div>
+  </div>
+  <div class="scroll-hint">SCROLL<i></i></div>
+</header>
+
+<div class="marquee"><div class="marquee-track" id="marquee"></div></div>
+
+<!-- ===== HERITAGE ===== -->
+<section class="heritage" id="heritage">
+  <div class="container heritage-grid">
+    <div class="reveal-l">
+      <div class="year-badge">
+        <svg class="circ" viewBox="0 0 300 300"><defs><path id="cp" d="M150 150m-130 0a130 130 0 1 1 260 0a130 130 0 1 1-260 0"/></defs><text><textPath href="#cp">✦ TRUSTED SINCE 1942 ✦ KAKINADA ✦ FRESH · PREMIUM · HEALTHY</textPath></text></svg>
+        <div><div class="yr gold-text">1942</div><small>ESTABLISHED</small></div>
+      </div>
+    </div>
+    <div class="reveal-r">
+      <span class="eyebrow">Our Legacy</span>
+      <h2 class="section-title">A family name Kakinada has trusted for over 80 years</h2>
+      <p>What began in 1942 as a modest family shop in Kakinada has grown into one of the town's most trusted names for dry fruits, chocolates and spices.</p>
+      <p>Through three generations one promise has stayed the same: <em>only the freshest, finest produce, honestly weighed and warmly served.</em></p>
+      <div class="timeline">
+        <div class="tl"><b>1942 · The Beginning</b><p>Founded in Kakinada with a simple promise: purity in every pack.</p></div>
+        <div class="tl"><b>Generations of Trust</b><p>Families return to us for weddings, festivals and everyday nutrition.</p></div>
+        <div class="tl"><b>Today · Kedarisetty Lovaraju Sons</b><p>Premium dry fruits, imported chocolates, spices and custom gift hampers.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CATEGORIES ===== -->
+<section class="cats" id="categories">
+  <div class="container center">
+    <span class="eyebrow reveal">Our Collections</span>
+    <h2 class="section-title reveal">Curated for every craving</h2>
+    <p class="section-sub reveal">Four collections, each sourced from trusted growers and checked by hand before it reaches you.</p>
+    <div class="cat-grid">
+      <div class="cat c1 reveal tilt" data-filter="dryfruits">
+        <div class="art"><svg style="width:80px;height:120px;left:20px;top:20px;transform:rotate(-20deg)"><use href="#almond"/></svg><svg style="width:110px;height:88px;left:70px;top:70px"><use href="#cashew"/></svg><svg style="width:70px;height:80px;left:110px;top:0"><use href="#pista"/></svg></div>
+        <h3>Dry Fruits</h3><p>Almonds, cashews, pistachios, walnuts, figs and more.</p><span class="more">Explore <i>→</i></span>
+      </div>
+      <div class="cat c2 reveal tilt" data-filter="chocolates" style="transition-delay:.1s">
+        <div class="art"><svg style="width:140px;height:110px;left:20px;top:30px;transform:rotate(-12deg)"><use href="#choco"/></svg><svg style="width:80px;height:80px;left:100px;top:90px"><use href="#truffle"/></svg></div>
+        <h3>Chocolates</h3><p>Imported and premium chocolates, plus dry-fruit chocolate boxes.</p><span class="more">Explore <i>→</i></span>
+      </div>
+      <div class="cat c3 reveal tilt" data-filter="spices" style="transition-delay:.2s">
+        <div class="art"><svg style="width:110px;height:110px;left:10px;top:20px"><use href="#anise"/></svg><svg style="width:50px;height:90px;left:120px;top:10px;transform:rotate(25deg)"><use href="#cardamom"/></svg><svg style="width:130px;height:52px;left:40px;top:120px;transform:rotate(-10deg)"><use href="#cinnamon"/></svg></div>
+        <h3>Spices</h3><p>Cardamom, saffron, cloves, cinnamon and other aromatic spices.</p><span class="more">Explore <i>→</i></span>
+      </div>
+      <div class="cat c4 reveal tilt" data-filter="gifting" style="transition-delay:.3s">
+        <div class="art"><svg style="width:150px;height:150px;left:20px;top:10px"><use href="#gift"/></svg></div>
+        <h3>Gift Hampers</h3><p>Hampers for festivals, weddings and corporate gifting.</p><span class="more">Explore <i>→</i></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRODUCTS ===== -->
+<section class="products" id="products">
+  <div class="container">
+    <div class="center">
+      <span class="eyebrow reveal">The Shop</span>
+      <h2 class="section-title reveal">Hand-picked. Fresh. Premium.</h2>
+      <p class="section-sub reveal">Add items to your list and send it to us on WhatsApp. We'll confirm your order and today's price.</p>
+    </div>
+    <div class="filters reveal" id="filters">
+      <button class="active" data-f="all">All</button>
+      <button data-f="dryfruits">Dry Fruits</button>
+      <button data-f="dates">Dates &amp; Figs</button>
+      <button data-f="seeds">Seeds &amp; Makhana</button>
+      <button data-f="chocolates">Chocolates</button>
+      <button data-f="spices">Spices</button>
+    </div>
+    <div class="p-grid" id="pGrid"></div>
+  </div>
+</section>
+
+<!-- ===== GIFTING ===== -->
+<section class="gifting" id="gifting">
+  <div class="container gift-grid">
+    <div class="reveal-l">
+      <div class="giftbox" id="giftbox">
+        <svg class="pop"><use href="#almond"/></svg>
+        <svg class="pop"><use href="#cashew"/></svg>
+        <svg class="pop"><use href="#truffle"/></svg>
+        <svg class="pop"><use href="#pista"/></svg>
+        <svg class="pop"><use href="#walnut"/></svg>
+        <div class="box-lid"><div class="bow"></div></div>
+        <div class="box-base"></div>
+      </div>
+      <p class="gift-hint">✦ Tap the box ✦</p>
+    </div>
+    <div class="reveal-r">
+      <span class="eyebrow">🎁 Perfect for Gifting</span>
+      <h2 class="section-title">Hampers that make every occasion feel special</h2>
+      <p class="section-sub">Elegant, customizable hampers packed by hand for the moments that matter.</p>
+      <div class="occasions" id="occasions">
+        <button class="active" data-o="0">Diwali</button>
+        <button data-o="1">Sankranti</button>
+        <button data-o="2">Weddings</button>
+        <button data-o="3">Corporate</button>
+        <button data-o="4">Return Gifts</button>
+      </div>
+      <div class="hamper-card" id="hamper"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY ===== -->
+<section class="why">
+  <div class="container center">
+    <span class="eyebrow reveal">The KLS Promise</span>
+    <h2 class="section-title reveal">Fresh · Premium · Healthy</h2>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="why-icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 16.6 6.5 19.5l1-6.3L3 8.9 9 8z"/></svg></div><h4>Since 1942</h4><p>More than 80 years of trust, built one customer at a time.</p></div>
+      <div class="why-card reveal" style="transition-delay:.1s"><div class="why-icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 20A7 7 0 019.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/><path d="M2 21c0-3 1.9-5.4 5.1-6"/></svg></div><h4>Always Fresh</h4><p>Stock is restocked often and stored properly, so it stays crunchy and full of flavour.</p></div>
+      <div class="why-card reveal" style="transition-delay:.2s"><div class="why-icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20M12 21L8 9l4-6 4 6z"/></svg></div><h4>Premium Grades</h4><p>Only top grades, from W240 cashews to Mamra almonds.</p></div>
+      <div class="why-card reveal" style="transition-delay:.3s"><div class="why-icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 00-7.8 7.8l1 1.1L12 21l7.8-7.6 1-1.1a5.5 5.5 0 000-7.7z"/></svg></div><h4>Healthy Living</h4><p>Natural nutrition for every age, from kids' tiffins to grandparents' wellness.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NUTRITION ===== -->
+<section class="nutri">
+  <div class="container">
+    <div class="center">
+      <span class="eyebrow reveal">Goodness Guide</span>
+      <h2 class="section-title reveal">Small bites. Big nutrition.</h2>
+      <p class="section-sub reveal">A quick look at why a handful of dry fruits a day is a good habit.</p>
+    </div>
+    <div class="n-wrap">
+      <div class="n-tabs reveal-l" id="nTabs"></div>
+      <div class="n-panel reveal-r" id="nPanel"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testi">
+  <div class="container center">
+    <span class="eyebrow reveal" style="color:var(--gold-2)">Customer Love</span>
+    <h2 class="section-title reveal">Trusted by Kakinada families</h2>
+    <div class="t-slider reveal" id="tSlider">
+      <div class="quote-mark">“</div>
+    </div>
+    <div class="dots" id="tDots"></div>
+  </div>
+</section>
+
+<!-- ===== INSTAGRAM ===== -->
+<section class="insta">
+  <div class="container center">
+    <span class="eyebrow reveal">@kedarisettylovarajusons</span>
+    <h2 class="section-title reveal">Follow our story</h2>
+    <div class="insta-row" id="instaRow"></div>
+    <a href="https://www.instagram.com/kedarisettylovarajusons/" target="_blank" rel="noopener" class="btn btn-gold reveal" style="margin-top:40px">Follow on Instagram</a>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<div class="cta-band">
+  <div class="container">
+    <h2>Planning a festival, wedding or celebration?</h2>
+    <p>Tell us your budget and we'll put together the perfect hamper for you.</p>
+    <a href="https://wa.me/919848652571?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20gift%20hampers." target="_blank" rel="noopener" class="btn btn-navy">💬 Chat with us on WhatsApp</a>
+  </div>
+</div>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="center">
+      <span class="eyebrow reveal">Visit Us</span>
+      <h2 class="section-title reveal">Come, taste the difference</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="c-card reveal-l">
+        <div class="c-item"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><b>OUR STORE</b><span>Kedarisetty Lovaraju Sons<br>Kakinada, Andhra Pradesh</span></div></div>
+        <div class="c-item"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg></div><div><b>CALL US</b><a href="tel:+919848652571">+91 98486 52571</a></div></div>
+        <div class="c-item"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><b>STORE HOURS</b><span>Monday – Sunday · 9:00 AM – 9:30 PM</span></div></div>
+        <div class="c-item" style="margin-bottom:10px"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></div><div><b>INSTAGRAM</b><a href="https://www.instagram.com/kedarisettylovarajusons/" target="_blank" rel="noopener">@kedarisettylovarajusons</a></div></div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:26px;position:relative;z-index:1">
+          <a href="tel:+919848652571" class="btn btn-gold">Call Now</a>
+          <a href="https://wa.me/919848652571" target="_blank" rel="noopener" class="btn btn-ghost">WhatsApp</a>
+        </div>
+      </div>
+      <div class="map reveal-r">
+        <iframe loading="lazy" title="Kakinada map" src="https://maps.google.com/maps?q=Kakinada%2C%20Andhra%20Pradesh&z=14&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="f-grid">
+      <div>
+        <a href="#home" class="brand"><svg viewBox="0 0 200 200"><use href="#crest"/></svg><div class="brand-name">KEDARISETTY<br>LOVARAJU SONS<small>KAKINADA · 1942</small></div></a>
+        <p style="margin-top:18px;max-width:300px">Premium dry fruits, chocolates and spices. Trusted by Kakinada families since 1942.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/kedarisettylovarajusons/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+          <a href="https://wa.me/919848652571" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></a>
+          <a href="tel:+919848652571" aria-label="Call"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg></a>
+        </div>
+      </div>
+      <div><h5>SHOP</h5><ul><li><a href="#products">Dry Fruits</a></li><li><a href="#products">Chocolates</a></li><li><a href="#products">Spices</a></li><li><a href="#gifting">Gift Hampers</a></li></ul></div>
+      <div><h5>COMPANY</h5><ul><li><a href="#heritage">Our Legacy</a></li><li><a href="#gifting">Corporate Gifting</a></li><li><a href="#contact">Visit Store</a></li></ul></div>
+      <div><h5>CONTACT</h5><ul><li>Kakinada, Andhra Pradesh</li><li><a href="tel:+919848652571">+91 98486 52571</a></li><li><a href="https://wa.me/919848652571" target="_blank" rel="noopener">WhatsApp Orders</a></li></ul></div>
+    </div>
+    <div class="f-bottom"><span>© <span id="yr"></span> Kedarisetty Lovaraju Sons. All rights reserved.</span><span>Crafted with ♥ by TRB Infotech</span></div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919848652571" target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></a>
+<button class="to-top" id="toTop" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="d-head"><div><h3>Your Order List</h3><small>Send it to us and we'll confirm the price</small></div><button id="closeDrawer" aria-label="Close">×</button></div>
+  <div class="d-body" id="dBody"></div>
+  <div class="d-foot"><button class="btn" id="sendWa">💬 Send Order on WhatsApp</button><p>We'll confirm availability &amp; today's price on WhatsApp</p></div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<script>
+const WA = '919848652571';
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+
+/* Laurel leaves on crest */
+(function(){
+  const g = document.querySelector('#crest .laurel'); let html='';
+  for(let i=0;i<9;i++){
+    const th=140+i*11.25, a=th*Math.PI/180, r=64;
+    const lx=100+r*Math.cos(a), ly=100-r*Math.sin(a), rot=180-th+18;
+    for(const [x,ro] of [[lx,rot],[200-lx,-rot]])
+      html += `<ellipse cx="${x.toFixed(1)}" cy="${ly.toFixed(1)}" rx="4.5" ry="10" transform="rotate(${ro.toFixed(1)} ${x.toFixed(1)} ${ly.toFixed(1)})"/>`;
+  }
+  g.innerHTML = html;
+})();
+
+/* Loader */
+let _started=false;
+function finishLoad(){ if(_started)return; _started=true; $('#loader').classList.add('done'); document.body.classList.add('loaded'); startCounters(); }
+setTimeout(finishLoad,1900); // don't wait for fonts/map to download
+
+/* Orbit nuts */
+function placeOrbit(el, items){
+  items.forEach((id,i)=>{
+    const a = i/items.length*Math.PI*2, d = document.createElement('div');
+    d.className='nut'; d.style.left=`calc(50% + ${Math.cos(a)*50}% - 31px)`; d.style.top=`calc(50% + ${Math.sin(a)*50}% - 31px)`;
+    d.innerHTML=`<svg><use href="#${id}"/></svg>`; el.appendChild(d);
+  });
+}
+placeOrbit($('#ring1'),['almond','cashew','pista','walnut','raisin','truffle']);
+placeOrbit($('#ring2'),['anise','date','cardamom','apricot','fig','makhana','choco','saffron']);
+
+/* Gold dust canvas */
+(function(){
+  const c=$('#dust'),x=c.getContext('2d');let W,H,P=[];
+  const rs=()=>{W=c.width=c.offsetWidth;H=c.height=c.offsetHeight};rs();addEventListener('resize',rs);
+  for(let i=0;i<70;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.8+.4,s:Math.random()*.4+.1,o:Math.random()});
+  (function f(){x.clearRect(0,0,W,H);P.forEach(p=>{p.y-=p.s;p.o+=.01;if(p.y<0){p.y=H;p.x=Math.random()*W}
+    x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fillStyle=`rgba(243,210,122,${.3+Math.abs(Math.sin(p.o))*.6})`;x.shadowBlur=8;x.shadowColor='#f3d27a';x.fill()});requestAnimationFrame(f)})();
+})();
+
+/* Hero parallax */
+$('.hero').addEventListener('mousemove',e=>{
+  const cx=e.clientX/innerWidth-.5, cy=e.clientY/innerHeight-.5;
+  $$('.floater').forEach(f=>{const d=+f.dataset.depth;f.style.transform=`translate(${cx*d}px,${cy*d}px)`});
+  $('#orbit').style.transform=`translate(${cx*-15}px,${cy*-15}px)`;
+});
+
+/* Counters */
+function startCounters(){
+  $$('[data-count]').forEach(el=>{const t=+el.dataset.count,suf=el.dataset.suffix||'';let s=null;
+    const step=ts=>{if(!s)s=ts;const p=Math.min((ts-s)/1800,1);el.textContent=Math.floor(t*(1-Math.pow(1-p,3)))+(p===1?suf:'');if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step)});
+}
+
+/* Marquee */
+const mq=['Premium Almonds','Palasa Cashews','Iranian Pistachios','Kashmiri Walnuts','Medjool Dates','Fine Chocolates','Kerala Cardamom','Pure Saffron','Festive Hampers','Since 1942'];
+$('#marquee').innerHTML=[...mq,...mq].map(t=>`<span>${t}</span>`).join('');
+
+/* Nav, progress, to-top */
+addEventListener('scroll',()=>{
+  const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
+  $('#progress').style.width=(y/h*100)+'%';
+  $('#nav').classList.toggle('scrolled',y>60);
+  $('#toTop').classList.toggle('show',y>700);
+},{passive:true});
+$('#toTop').onclick=()=>scrollTo({top:0,behavior:'smooth'});
+$('#burger').onclick=()=>$('#navLinks').classList.toggle('open');
+$$('#navLinks a').forEach(a=>a.onclick=()=>$('#navLinks').classList.remove('open'));
+
+/* Reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+const observe=()=>$$('.reveal,.reveal-l,.reveal-r').forEach(el=>io.observe(el));
+
+/* Tilt */
+$$('.tilt').forEach(c=>{
+  c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+    c.style.transform=`rotateY(${(x-.5)*16}deg) rotateX(${(.5-y)*16}deg)`;c.style.setProperty('--mx',x*100+'%');c.style.setProperty('--my',y*100+'%')});
+  c.addEventListener('mouseleave',()=>c.style.transform='');
+  c.addEventListener('click',()=>{const f=c.dataset.filter; if(f==='gifting'){location.hash='gifting';return}
+    location.hash='products'; setFilter(f)});
+});
+
+/* Products */
+const BG={dryfruits:'linear-gradient(135deg,#f6e7c8,#e9cf9c)',dates:'linear-gradient(135deg,#f3dccb,#d9a98a)',seeds:'linear-gradient(135deg,#eef2df,#cfdcb0)',chocolates:'linear-gradient(135deg,#ead4c2,#b98b6a)',spices:'linear-gradient(135deg,#fbe0c8,#e9a77a)'};
+const P=[
+ {n:'California Almonds',d:'Crunchy, sweet and rich in Vitamin E.',c:'dryfruits',s:'almond',w:[44,66],t:'Bestseller',hot:1},
+ {n:'Mamra Almonds',d:'Rare, oil-rich Mamra badam. Truly premium.',c:'dryfruits',s:'almond',w:[44,66],t:'Premium'},
+ {n:'Cashews W240',d:'Large, creamy whole cashews.',c:'dryfruits',s:'cashew',w:[70,56],t:'Bestseller',hot:1},
+ {n:'Roasted & Salted Cashews',d:'Perfectly roasted, lightly salted.',c:'dryfruits',s:'cashew',w:[70,56]},
+ {n:'Iranian Pistachios',d:'Roasted and salted, easy to open.',c:'dryfruits',s:'pista',w:[52,58],t:'Imported'},
+ {n:'Kashmiri Walnuts',d:'Light, crunchy kernels. Brain food.',c:'dryfruits',s:'walnut',w:[60,60]},
+ {n:'Black & Golden Raisins',d:'Naturally sweet, seedless kishmish.',c:'dryfruits',s:'raisin',w:[40,40]},
+ {n:'Turkish Apricots',d:'Soft, juicy and full of fibre.',c:'dryfruits',s:'apricot',w:[54,54]},
+ {n:'Medjool Dates',d:'Soft, caramel-like king of dates.',c:'dates',s:'date',w:[38,58],t:'Imported'},
+ {n:'Afghan Anjeer (Figs)',d:'Sun-dried figs, rich in iron.',c:'dates',s:'fig',w:[56,56]},
+ {n:'Premium Makhana',d:'Popped fox nuts, a light and healthy snack.',c:'seeds',s:'makhana',w:[50,50],t:'Healthy'},
+ {n:'Seeds Mix',d:'Pumpkin, sunflower, chia and flax.',c:'seeds',s:'seeds',w:[60,52]},
+ {n:'Imported Chocolates',d:'Popular brands from around the world.',c:'chocolates',s:'choco',w:[70,54],t:'New'},
+ {n:'Dry Fruit Truffles',d:'Chocolate wrapped around premium nuts.',c:'chocolates',s:'truffle',w:[52,52],hot:1,t:'Gift Fav'},
+ {n:'Green Cardamom',d:'Bold green pods with intense aroma.',c:'spices',s:'cardamom',w:[30,54]},
+ {n:'Pure Kashmiri Saffron',d:'Real kesar threads for colour and aroma.',c:'spices',s:'saffron',w:[36,54],t:'Premium'},
+ {n:'Star Anise',d:'Whole star anise for biryani and masala.',c:'spices',s:'anise',w:[56,56]},
+ {n:'Ceylon Cinnamon',d:'Sweet, delicate true cinnamon sticks.',c:'spices',s:'cinnamon',w:[80,32]},
+ {n:'Black Pepper',d:'Bold, pungent Malabar peppercorns.',c:'spices',s:'pepper',w:[50,50]}
+];
+function pile(p){
+  const [w,h]=p.w, pos=[[0,0,0],[-38,14,-25],[38,10,22],[-14,-26,40],[20,-22,-15]];
+  return pos.map(([x,y,r],i)=>`<svg style="width:${w}px;height:${h}px;left:calc(50% - ${w/2}px + ${x}px);top:calc(50% - ${h/2}px + ${y}px);transform:rotate(${r}deg);z-index:${i===0?5:i}"><use href="#${p.s}"/></svg>`).join('');
+}
+$('#pGrid').innerHTML=P.map((p,i)=>`
+ <div class="p-card reveal" data-c="${p.c}" style="transition-delay:${(i%4)*.08}s">
+  ${p.t?`<span class="tag ${p.hot?'hot':''}">${p.t}</span>`:''}
+  <div class="p-img" style="background:${BG[p.c]}"><div class="pile">${pile(p)}</div></div>
+  <div class="p-body"><h4>${p.n}</h4><p>${p.d}</p>
+   <div class="p-foot"><select aria-label="Weight">${p.c==='spices'&&p.s==='saffron'?'<option>1 g</option><option>2 g</option><option>5 g</option>':'<option>250 g</option><option>500 g</option><option>1 kg</option>'}</select>
+   <button class="add" data-i="${i}">+ Add</button></div></div>
+ </div>`).join('');
+observe();
+
+function setFilter(f){
+  $$('#filters button').forEach(b=>b.classList.toggle('active',b.dataset.f===f));
+  $$('.p-card').forEach(c=>{const show=f==='all'||c.dataset.c===f;c.classList.toggle('hide',!show);if(show){c.style.opacity=0;c.style.transform='scale(.9)';requestAnimationFrame(()=>setTimeout(()=>{c.style.opacity='';c.style.transform=''},30))}});
+}
+$$('#filters button').forEach(b=>b.onclick=()=>setFilter(b.dataset.f));
+
+/* Cart */
+let cart=[];
+function toast(m){const t=$('#toast');t.innerHTML=m;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2200)}
+$('#pGrid').addEventListener('click',e=>{
+  const b=e.target.closest('.add');if(!b)return;
+  const p=P[b.dataset.i],w=b.parentElement.querySelector('select').value;
+  const ex=cart.find(c=>c.n===p.n&&c.w===w); ex?ex.q++:cart.push({n:p.n,w,q:1,s:p.s,c:p.c});
+  // fly animation
+  const r=b.getBoundingClientRect(),cr=$('#cartBtn').getBoundingClientRect(),f=document.createElement('div');
+  f.className='fly';f.innerHTML=`<svg width="40" height="40"><use href="#${p.s}"/></svg>`;f.style.left=r.left+'px';f.style.top=r.top+'px';document.body.appendChild(f);
+  requestAnimationFrame(()=>{f.style.left=cr.left+'px';f.style.top=cr.top+'px';f.style.transform='scale(.3) rotate(360deg)';f.style.opacity='.4'});
+  setTimeout(()=>{f.remove();$('#cartBtn').classList.remove('bump');void $('#cartBtn').offsetWidth;$('#cartBtn').classList.add('bump');renderCart()},800);
+  b.classList.add('ok');b.textContent='✓ Added';setTimeout(()=>{b.classList.remove('ok');b.textContent='+ Add'},1400);
+  toast(`<b>${p.n}</b> (${w}) added to your list`);
+});
+function renderCart(){
+  const n=cart.reduce((a,c)=>a+c.q,0),cc=$('#cartCount');cc.textContent=n;cc.classList.toggle('show',n>0);
+  $('#dBody').innerHTML=cart.length?cart.map((c,i)=>`<div class="d-item"><div class="thumb" style="background:${BG[c.c]}"><svg><use href="#${c.s}"/></svg></div><div class="info"><b>${c.n}</b><small>${c.w}</small></div><div class="qty"><button data-d="${i}">−</button><span>${c.q}</span><button data-u="${i}">+</button></div></div>`).join('')
+   :`<div class="d-empty"><svg viewBox="0 0 80 80"><use href="#gift"/></svg><p>Your list is empty.<br>Add some goodness from our shop!</p></div>`;
+}
+$('#dBody').addEventListener('click',e=>{const d=e.target.dataset;if(d.u!==undefined)cart[d.u].q++;if(d.d!==undefined){cart[d.d].q--;if(!cart[d.d].q)cart.splice(d.d,1)}renderCart()});
+const openD=()=>{renderCart();$('#drawer').classList.add('show');$('#overlay').classList.add('show')},closeD=()=>{$('#drawer').classList.remove('show');$('#overlay').classList.remove('show')};
+$('#cartBtn').onclick=openD;$('#closeDrawer').onclick=closeD;$('#overlay').onclick=closeD;
+$('#sendWa').onclick=()=>{
+  if(!cart.length){toast('Add a few items first 🙂');return}
+  const msg='Namaste Kedarisetty Lovaraju Sons! 🙏\nI would like to order:\n\n'+cart.map((c,i)=>`${i+1}. ${c.n}: ${c.w} × ${c.q}`).join('\n')+'\n\nPlease confirm availability and price.';
+  open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`,'_blank');
+};
+
+/* Gift box + hampers */
+$('#giftbox').onclick=function(){this.classList.toggle('open')};
+const H=[
+ {t:'Diwali Celebration Hamper',d:'Light up the festival with a gold-trimmed box of the finest nuts and sweets.',i:['Almonds & Cashews','Pistachios','Premium Chocolates','Decorative Diyas','Medjool Dates','Elegant Gift Box']},
+ {t:'Sankranti Sweet Harvest',d:'Celebrate the harvest festival with traditional and modern treats.',i:['Mixed Dry Fruits','Dates & Figs','Jaggery Bites','Cardamom','Golden Raisins','Festive Basket']},
+ {t:'Wedding & Shubh Karyam Trays',d:'Grand trays for engagements, weddings and sare-saare. Custom-made in bulk.',i:['Decorated Trays','Cashew & Almond Mounds','Saffron & Elaichi','Custom Name Tags','Bulk Pricing','Doorstep Delivery']},
+ {t:'Corporate Gifting',d:'Make a lasting impression on clients and teams with branded premium hampers.',i:['Logo Branding','Budget Options','Premium Packaging','Bulk Orders','Personal Cards','On-time Delivery']},
+ {t:'Return Gifts',d:'Small, charming packs for birthdays, poojas, housewarmings and functions.',i:['Mini Dry Fruit Pouches','Chocolate Boxes','Potli Bags','Custom Stickers','Any Quantity','Affordable']}
+];
+function showHamper(i){const h=H[i],el=$('#hamper');el.classList.remove('swap');void el.offsetWidth;el.classList.add('swap');
+  el.innerHTML=`<h3>${h.t}</h3><p>${h.d}</p><ul>${h.i.map(x=>`<li>${x}</li>`).join('')}</ul><a class="btn btn-gold" target="_blank" rel="noopener" href="https://wa.me/${WA}?text=${encodeURIComponent('Hi! I am interested in the '+h.t+'. Please share details.')}">Enquire on WhatsApp</a>`}
+$$('#occasions button').forEach(b=>b.onclick=()=>{$$('#occasions button').forEach(x=>x.classList.remove('active'));b.classList.add('active');showHamper(+b.dataset.o)});
+showHamper(0);
+
+/* Nutrition */
+const N=[
+ {n:'Almonds',te:'బాదం',s:'almond',k:'Brain & Skin',b:[['Vitamin E',90],['Healthy Fats',80],['Protein',60],['Fibre',55]],note:'Soaked almonds in the morning are a classic for memory and glowing skin.'},
+ {n:'Walnuts',te:'అక్రోట్',s:'walnut',k:'Heart Health',b:[['Omega-3',95],['Antioxidants',85],['Healthy Fats',80],['Protein',45]],note:'One of the richest plant sources of Omega-3. Shaped like the brain it helps.'},
+ {n:'Cashews',te:'జీడిపప్పు',s:'cashew',k:'Energy & Bones',b:[['Magnesium',80],['Copper',90],['Iron',55],['Protein',55]],note:'Creamy cashews provide minerals that support strong bones and steady energy.'},
+ {n:'Dates',te:'ఖర్జూరం',s:'date',k:'Natural Energy',b:[['Natural Sugars',90],['Fibre',70],['Potassium',75],['Iron',45]],note:"Nature's own energy bar. A healthy swap for refined sugar."},
+ {n:'Pistachios',te:'పిస్తా',s:'pista',k:'Eyes & Gut',b:[['Vitamin B6',85],['Lutein',80],['Fibre',60],['Protein',60]],note:'Rich in antioxidants that support eye health, and a great guilt-free snack.'}
+];
+$('#nTabs').innerHTML=N.map((x,i)=>`<button class="n-tab ${i?'':'active'}" data-i="${i}"><svg viewBox="0 0 60 90"><use href="#${x.s}"/></svg><div><b>${x.n}</b><span>${x.k}</span></div></button>`).join('');
+function showN(i){const x=N[i];$('#nPanel').innerHTML=`<svg class="big"><use href="#${x.s}"/></svg><h3>${x.n}</h3><div class="te">${x.te} · ${x.k}</div>${x.b.map(([l,v])=>`<div class="bar"><label>${l}<span>${v>=80?'Excellent':v>=60?'High':'Good'}</span></label><div><i data-w="${v}"></i></div></div>`).join('')}<p class="note">${x.note}</p>`;
+  requestAnimationFrame(()=>setTimeout(()=>$$('#nPanel .bar i').forEach(b=>b.style.width=b.dataset.w+'%'),60))}
+$$('.n-tab').forEach(b=>b.onclick=()=>{$$('.n-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');showN(+b.dataset.i)});
+new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){showN(0);o.disconnect()}},{threshold:.3}).observe($('#nPanel'));
+
+/* Testimonials */
+const T=[
+ {q:'For three generations our family has bought dry fruits only from Lovaraju Sons. The quality has never changed. Always fresh, always honest.',w:'Lakshmi Prasanna',p:'Kakinada'},
+ {q:'We ordered 500 wedding trays and every single one was beautifully done. Our guests are still talking about them!',w:'Srinivas Rao',p:'Wedding Order · Rajahmundry'},
+ {q:'The best cashews and Medjool dates in town. Their Diwali hampers are my go-to gift for clients every year.',w:'Ravi Teja',p:'Business Owner · Kakinada'},
+ {q:'Friendly service and genuinely premium products. My kids love their chocolates, and I love the almonds!',w:'Anusha K.',p:'Regular Customer'}
+];
+$('#tSlider').insertAdjacentHTML('beforeend',T.map((t,i)=>`<div class="t-slide ${i?'':'active'}"><p class="q">${t.q}</p><div class="stars">★★★★★</div><div class="who">${t.w}<small>${t.p}</small></div></div>`).join(''));
+$('#tDots').innerHTML=T.map((_,i)=>`<button class="${i?'':'active'}" data-i="${i}" aria-label="Slide ${i+1}"></button>`).join('');
+let ti=0,tt;const goT=i=>{ti=i;$$('.t-slide').forEach((s,j)=>s.classList.toggle('active',j===i));$$('#tDots button').forEach((d,j)=>d.classList.toggle('active',j===i))};
+const autoT=()=>{clearInterval(tt);tt=setInterval(()=>goT((ti+1)%T.length),5000)};
+$$('#tDots button').forEach(d=>d.onclick=()=>{goT(+d.dataset.i);autoT()});autoT();
+
+/* Insta tiles */
+const IG=[['almond','#0b1a4a'],['truffle','#3a1d0d'],['cashew','#a87a1c'],['gift','#13266b'],['anise','#7a2a10'],['pista','#4f6b2a']];
+$('#instaRow').innerHTML=IG.map(([s,c],i)=>`<a class="insta-tile reveal" style="background:radial-gradient(circle at 30% 30%,${c}cc,${c});transition-delay:${i*.07}s" href="https://www.instagram.com/kedarisettylovarajusons/" target="_blank" rel="noopener"><svg class="n"><use href="#${s}"/></svg><div class="ov"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></div></a>`).join('');
+observe();
+
+$('#yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
